@@ -1,6 +1,39 @@
+import tkinter
 import pickle
+from tkinter import messagebox
 import os
 import pathlib
+
+
+#window instantiation
+window = tkinter.Tk()
+
+#hide menu window until login confirmed
+window.withdraw()
+
+#window title
+window.title('The Bank Registration')
+
+#code to disable maximize
+window.resizable(0,0)
+
+#window background color
+window.configure(background="cyan")
+
+
+#####################################################################
+
+#Login Form
+
+#toplevel window for Login
+login_Form = tkinter.Toplevel()
+login_Form.wm_geometry("190x220")
+login_Form.resizable(0,0)
+login_Form.configure(background="cyan")
+
+
+
+
 class Account :
     accNo = 0
     name = ''
@@ -46,13 +79,13 @@ class Account :
     
 
 def intro():
-    print("\t\t\t\t**********************")
-    print("\t\t\t\tBANK MANAGEMENT SYSTEM")
-    print("\t\t\t\t**********************")
+#     print("\t\t\t\t**********************")
+#     print("\t\t\t\tBANK MANAGEMENT SYSTEM")
+#     print("\t\t\t\t**********************")
 
-    print("\t\t\t\tBrought To You By:")
-    print("\t\t\t\tcode-projects.org")
-    input()
+#     print("\t\t\t\tBrought To You By:")
+#     print("\t\t\t\tcode-projects.org")
+#     input()
 
 
 
@@ -218,7 +251,7 @@ while ch != 8:
     
 
 
-    
+window.mainloop()    
     
     
     
